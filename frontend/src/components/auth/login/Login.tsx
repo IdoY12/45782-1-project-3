@@ -5,8 +5,11 @@ import authService from "../../../services/auth";
 import AuthContext from "../auth/AuthContext";
 import type LoginModel from "../../../models/login";
 import "../auth-panel/AuthPanel.css"
+import useTitle from "../../../hooks/use-title";
 
 export default function Login() {
+
+    useTitle('Login')
 
     const {
         register,

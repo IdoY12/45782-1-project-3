@@ -4,8 +4,11 @@ import { NavLink, useNavigate } from "react-router-dom";
 import signupService from "../../../services/signup";
 import type RegisterModel from "../../../models/Register";
 import "../auth-panel/AuthPanel.css"
+import useTitle from "../../../hooks/use-title";
 
 export default function Signup() {
+
+    useTitle('Signup')
 
     const { register, handleSubmit, formState: { errors } } = useForm<RegisterModel>();
     const [isSubmitting, setIsSubmitting] = useState(false);
