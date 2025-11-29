@@ -1,4 +1,5 @@
-# 45782-1-project-3
+45782-1-project-3
+
 🚀 Project Setup & Run Guide
 
 This project contains Frontend (React), Backend (Node + Express + Sequelize), MySQL, and LocalStack (S3 mock) — all running together via Docker Compose.
@@ -16,12 +17,15 @@ JWT_SECRET=jwtSecret APP_SECRET=secret npm run dev
 👑 2. Admin Login
 Admin account included in the seed:
 Email: ido1@mail.com
+
 Password: 123456
 
 👤 3. Regular User Login
 Email: tomer10@mail.com
+
 Password: 123456
 Email: gil5@mail.com
+
 Password: 123456
 
 📁 4. LocalStack S3 Bucket
@@ -41,7 +45,7 @@ chmod +x localstack/init/ready.d/s3-init.sh
 Start everything from scratch:
 docker compose down -v
 docker compose build --no-cache
-docker compose up --build
+docker compose up
 
 After startup:
 MySQL is seeded
