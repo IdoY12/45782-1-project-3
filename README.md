@@ -2,6 +2,11 @@
 
 🚀 Project Setup & Run Guide
 
+⚠️ Important – LocalStack image initialization
+The S3 bucket is created by the backend code, but the images are initialized by LocalStack itself.
+Make sure the file localstack/init/ready.d/s3-init.sh is executable (chmod +x).
+If the script is not executable, LocalStack will start without uploading the initial images, and the application will load an empty bucket.
+
 This project contains Frontend (React), Backend (Node + Express + Sequelize), MySQL, and LocalStack (S3 mock) — all running together via Docker Compose.
 
 Below is the exact procedure to fully set up the system.
